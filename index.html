@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ServiceHub - Responsive Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!--Hero Section-->
+  <section class="bg-white rounded-md shadow p-4 md:p-6 max-w-screen-xl mx-auto md:my-5">
+    <!-- Navbar -->
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold">Service<span class="text-yellow-500">Hub</span></a>
+
+      <!-- Hamburger Icon -->
+      <div class="md:hidden" id="menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-7 h-7 cursor-pointer">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+        </svg>
+      </div>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex space-x-6 items-center text-base font-medium">
+        <a href="#home" class="hover:text-yellow-500">Home</a>
+        <a href="#about" class="hover:text-yellow-500">About US</a>
+        <a href="#services" class="hover:text-yellow-500">Services</a>
+        <a href="#support" class="hover:text-yellow-500">Support</a>
+        <a href="userform.html"
+          class="ml-4 bg-yellow-400 text-white px-4 py-2 rounded font-semibold hover:bg-yellow-500 transition">Login</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="md:hidden hidden mt-3 space-y-2 text-base font-medium shadow-md bg-white p-4 rounded-md">
+      <a href="#home" class="block py-1 hover:text-yellow-500">Home</a>
+      <a href="#about" class="block py-1 hover:text-yellow-500">About US</a>
+      <a href="#services" class="block py-1 hover:text-yellow-500">Services</a>
+      <a href="#support" class="block py-1 hover:text-yellow-500">Support</a>
+      <div class="flex gap-3 mt-3">
+        <a class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition w-full" href="/userform.html">Login</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="home" class="mt-10 flex flex-col-reverse lg:flex-row items-center gap-8" data-aos="fade-right">
+      <!-- Left Text -->
+      <div class="w-full lg:w-1/2 text-center ml-3 lg:text-left">
+        <h1 class="text-3xl font-bold">
+          Welcome to,
+          <span class="text-4xl text-yellow-500 block mt-1">ServiceHub</span>
+        </h1>
+        <p class="mt-4 text-lg">
+          Need a reliable electrician, plumber, or CCTV installation?
+          <span class="text-green-600">We’ve got you covered!</span>
+        </p>
+        <p class="mt-2 text-gray-700">
+          At ServiceHub, we make it easy to book professional services. Whether it’s repairs, plumbing, or security,
+          we connect you with trusted experts ready to help.
+        </p>
+        <button
+          class="mt-9 bg-yellow-400 text-white px-5 py-2 rounded font-semibold hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+
+      <!-- Right Image -->
+      <div class="w-full lg:w-1/2 flex justify-center" data-aos="fade-right">
+        <img src="./assets/img/hero.png" alt="Electrician"
+          class="max-w-xs w-70 h-70 sm:max-w-sm md:max-w-md lg:max-w-lg object-contain" />
+      </div>
+    </div>
+  </section>
+
+
+  <!--About Section-->
+  <section id="about" class="mt-10 bg-white rounded-md shadow p-4 md:p-6 max-w-screen-xl mx-auto md:my-5">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-10" data-aos="fade-up">About Us</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Vision -->
+        <div class="bg-white shadow-xl rounded-2xl p-6" data-aos="fade-right">
+          <h3 class="text-2xl font-semibold text-yellow-600 mb-4">Our Vision</h3>
+          <p class="text-gray-700">
+            We aim to revolutionize the way people find and book local service providers like electricians, plumbers,
+            and more — making it faster, smarter, and trustworthy.
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="bg-white shadow-xl rounded-2xl p-6" data-aos="fade-left">
+          <h3 class="text-2xl font-semibold text-yellow-600 mb-4">Our Mission</h3>
+          <p class="text-gray-700">
+            Our mission is to connect verified professionals with customers in need, using simple tech and reliable
+            service, with OTP-based authentication and smooth booking.
+          </p>
+        </div>
+      </div>
+
+      <!-- Why Choose Us -->
+      <div class="mt-16 bg-white shadow-xl rounded-2xl p-6 max-w-4xl mx-auto" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold text-yellow-600 mb-4"> Why Choose Us</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+          <li>Verified and skilled service providers</li>
+          <li>Easy booking with real-time OTP verification</li>
+          <li>Transparent pricing and quick response</li>
+          <li>Secure and user-friendly interface</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!--Services Section-->
+  <section id="services" class="mt-10 bg-white rounded-md shadow p-4 md:p-6 max-w-screen-xl mx-auto md:my-5">
+    <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:ml-5">
+      <!-- Electrician Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-2xl font-semibold">Electrician</h3>
+        <p class="text-gray-600 text-center mt-5">Skilled electricians available for wiring, lighting, and power-related
+          repairs or installations.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+      <!-- Plumber Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-2xl font-semibold">Plumber</h3>
+        <p class="text-gray-600 text-center mt-5">Leakage issues, bathroom fittings, or full pipe installations — our
+          plumbers handle it all.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+      <!-- Carpenter Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-2xl font-semibold">Carpenter</h3>
+        <p class="text-gray-600 text-center mt-5">Professional carpentry services for doors, windows, furniture, and
+          wooden repairs or custom work.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+      <!-- CCTV Technician Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-2xl font-semibold">CCTV Technician</h3>
+        <p class="text-gray-600 text-center mt-5">Secure your property with CCTV installation, maintenance, and
+          troubleshooting services.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+      <!-- TV Technician Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-2xl font-semibold">TV Technician</h3>
+        <p class="text-gray-600 text-center mt-5">Get expert help with LED/LCD TV setup, wall mounting, or screen/audio
+          issues.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+      <!-- AC Technician Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-2xl font-semibold">AC Technician</h3>
+        <p class="text-gray-600 text-center mt-5">Stay cool with AC repair, gas filling, cleaning, and installation
+          services from our pros.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+      <!-- Refrigerator Technician Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-xl md:text-2xl font-semibold">Refrigerator Technician</h3>
+        <p class="text-gray-600 text-center mt-5">Cooling issues, compressor faults, or gas refill — our fridge experts
+          are ready to help.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+      <!-- WaterHeater Technician Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-xl md:text-2xl font-semibold">WaterHeater Technician</h3>
+        <p class="text-gray-600 text-center mt-5">Fix heating elements, leakage, or installation of geysers quickly with
+          our skilled technicians.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+      <!-- Washing Machine Technician Card -->
+      <div class="bg-gray-50 rounded shadow-md p-4 flex flex-col items-center" data-aos="zoom-in">
+        <h3 class="text-xl md:text-2xl font-semibold">Washing Machine Technician</h3>
+        <p class="text-gray-600 text-center mt-5">Top load or front load, we fix motor, drum, and drainage problems with
+          care and speed.</p>
+        <button class="mt-5 bg-yellow-400 text-white font-bold px-4 py-2 rounded hover:bg-yellow-600 transition">Book
+          Now</button>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="join-us" class="bg-gray-100 py-20 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <!-- Left Content -->
+      <div data-aos="fade-right">
+        <h2 class="text-4xl font-bold mb-4 text-gray-800">Join Our Network of Experts</h2>
+        <p class="text-gray-600 mb-6">
+          Are you an experienced electrician, plumber, carpenter or other skilled service provider?
+          Join us to grow your career, reach more customers, and work on your own schedule.
+        </p>
+        <a href="/join" class="inline-block bg-yellow-400 text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-yellow-600 transition">
+          Register as a Worker
+        </a>
+      </div>
+  
+      <!-- Right Image or Illustration -->
+      <div data-aos="fade-left" class="flex justify-center">
+        <img src="./assets/img/join.png" alt="Join Us" class="w-80 h-auto">
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Support/Contact Section -->
+  <section id="support" class="mt-10 bg-white rounded-md shadow p-6 max-w-screen-xl mx-auto md:my-10">
+    <h2 class="text-2xl font-bold text-center mb-6">Contact Us / Support</h2>
+    <div class="flex flex-col lg:flex-row items-center gap-8">
+      <!-- Left Side (Contact Info) -->
+      <div class="w-full lg:w-1/2 text-center lg:text-left">
+        <h3 class="text-xl font-semibold mb-4">We're Here to Help!</h3>
+        <p class="text-lg mb-6">Have questions or need support? Feel free to reach out, and our team will assist you
+          with anything you need. We are always ready to help you solve your problems and answer your queries.</p>
+        <div class="mb-4">
+          <h4 class="text-lg font-semibold">Email</h4>
+          <p class="text-gray-600">support@servicehub.com</p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-lg font-semibold">Phone</h4>
+          <p class="text-gray-600">+1 (800) 123-4567</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold">Location</h4>
+          <p class="text-gray-600">123 ServiceHub St, Cityname, Country</p>
+        </div>
+      </div>
+
+      <!-- Right Side (Contact Form) -->
+      <div class="w-full lg:w-1/2">
+        <h3 class="text-xl font-semibold mb-4 text-center lg:text-left">Send Us a Message</h3>
+        <form action="#" method="POST" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium">Your Name</label>
+            <input type="text" id="name" name="name" class="mt-1 block w-full p-3 border rounded-md bg-gray-50"
+              placeholder="Enter your name" required />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Your Email</label>
+            <input type="email" id="email" name="email" class="mt-1 block w-full p-3 border rounded-md bg-gray-50"
+              placeholder="Enter your email" required />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium">Your Message</label>
+            <textarea id="message" name="message" class="mt-1 block w-full p-3 border rounded-md bg-gray-50" rows="4"
+              placeholder="Write your message here" required></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-yellow-400 text-white py-3 rounded-md font-semibold hover:bg-yellow-600 transition">Send
+            Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-6">
+  <div class="max-w-screen-xl mx-auto text-center">
+    <!-- Footer Text -->
+    <p class="text-sm md:text-base">© 2025 ServiceHub. All rights reserved.</p>
+    <p class="text-sm md:text-base">Designed by <a href="#" class="text-yellow-500">Sakthivel</a></p>
+  </div>
+</footer>
+
+
+
+
+
+
+  <!-- JS: Toggle Menu -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    AOS.init({
+      duration: 2500, // animation duration in ms
+      once: false     // animation happens only once
+    });
+
+  </script>
+</body>
+
+</html>

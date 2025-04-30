@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServiceHub - Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <section class="min-h-screen flex items-center justify-center px-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+            <!-- Toggle Buttons -->
+            <div class="flex mb-6 bg-yellow-100 rounded-full p-1">
+                <button onclick="showForm('login')" id="loginBtn"
+                    class="w-1/2 py-2 rounded-full text-sm font-semibold transition-all duration-300">Login</button>
+                <button onclick="showForm('register')" id="registerBtn"
+                    class="w-1/2 py-2 rounded-full text-sm font-semibold transition-all duration-300">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="space-y-5">
+                <h2 class="text-2xl font-bold text-yellow-500 mb-4 text-center">Welcome Back</h2>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" name="email" id="lemail" required
+                        class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                        autocomplete="off">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" name="password" id="lpassword" required
+                        class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                        autocomplete="off">
+                </div>
+                <button type="submit"
+                    class="w-full bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-4 rounded-xl transition duration-300">
+                    Login
+                </button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="space-y-5 hidden">
+                <h2 class="text-2xl font-bold text-yellow-500 mb-4 text-center">Create Account</h2>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" name="name" id="name" required
+                        class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                        autocomplete="off">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" name="email" id="email" required
+                        class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                        autocomplete="off">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Phone</label>
+                    <input type="tel" name="phone" id="phone" required
+                        class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                        autocomplete="off">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Address</label>
+                    <textarea name="address" id="address" required rows="3"
+                        class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none resize-none"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" name="password" id="password" required
+                        class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                        autocomplete="off">
+                    <ul id="password-rules" class="mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+                        <li id="length" class="text-red-500">Min 8 characters</li>
+                        <li id="uppercase" class="text-red-500">At least one uppercase letter</li>
+                        <li id="lowercase" class="text-red-500">At least one lowercase letter</li>
+                        <li id="number" class="text-red-500">At least one number</li>
+                        <li id="special" class="text-red-500">At least one special character (!@#$%^&*)</li>
+                    </ul>
+
+                </div>
+                <button type="submit"
+                    class="w-full bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-4 rounded-xl transition duration-300">
+                    Register
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Form Toggle Script -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+
+</html>

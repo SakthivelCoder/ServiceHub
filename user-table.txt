@@ -1,0 +1,13 @@
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,          -- Unique ID for each user
+    first_name VARCHAR(100) NOT NULL,                -- User's first name
+    last_name VARCHAR(100),                          -- User's last name (optional)
+    email VARCHAR(255) UNIQUE NOT NULL,              -- User's email, must be unique
+    password VARCHAR(255) NOT NULL,                  -- Encrypted password for security
+    phone VARCHAR(15) UNIQUE,                        -- User's phone number (optional)
+    address VARCHAR(255),                            -- User's address (optional if asked during registration)
+    city VARCHAR(100),                               -- City of user (optional)
+    state VARCHAR(100),                              -- State (optional)
+    zip_code VARCHAR(20),                            -- Postal code (optional)
+    role ENUM('user', 'worker', 'admin') DEFAULT 'user' -- Role of the user
+);
