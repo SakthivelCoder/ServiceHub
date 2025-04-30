@@ -100,4 +100,3 @@ Feel free to **fork**, **contribute**, or **open an issue**.
 
 This project is licensed under the [MIT License](LICENSE).
 ```
----
