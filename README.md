@@ -19,10 +19,10 @@
 
 ## 🧑‍💻 **Tech Stack**
 
-- **Frontend**: HTML5, Tailwind CSS (Yellow Theme)
+- **Frontend**: HTML5, Tailwind CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB, Mongoose
-- **Email Service**: Nodemailer (for email verification)
+- **Email Service**: Nodemailer
 - **Authentication**: JWT-based token for secure user management
 
 ---
@@ -31,18 +31,17 @@
 
 ```
 servicehub/
-├── public/                 # Static HTML & CSS files
-│   └── verify.html         # Email verification page
 ├── routes/                 # API routes
 │   └── user.js             # User-related routes (e.g., register, verify)
 ├── models/                 # MongoDB models
 │   └── User.js             # User schema and model
 ├── controllers/            # Business logic for handling requests
 │   └── userController.js
-├── utils/                  # Helper functions (e.g., email sender)
-│   └── emailSender.js
-├── .env                    # Environment variables (e.g., MongoDB URI)
+├── .env                    # Environment variables
 ├── server.js               # Express server setup
+├── index.html              # Home Page
+├── userform.html           # Login/Signup Form Page
+├── verify.html             # Email Verification Page
 └── README.md               # Project documentation
 ```
 
