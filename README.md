@@ -32,7 +32,7 @@
 ```
 servicehub/
 ├── routes/                 # API routes
-    └── user.js             # User-related routes (e.g., register, verify)
+    └── authRoutes.js       # User-related routes (e.g., register, verify)
 ├── public/                 # MongoDB models
     └── joinus.html         # Worker registration form
 ├── models/                 # MongoDB models
