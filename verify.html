@@ -14,8 +14,7 @@
     <div id="spinner" class="flex justify-center mb-4">
       <svg class="animate-spin h-6 w-6 text-yellow-500" viewBox="0 0 24 24">
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path class="opacity-75" fill="currentColor"
-          d="M4 12a8 8 0 018-8v8z"></path>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
       </svg>
     </div>
     <h6 id="message" class="text-gray-700 text-lg font-medium">Verifying...</h6>
@@ -29,13 +28,19 @@
 
   <script>
     const token = new URLSearchParams(window.location.search).get('token');
+    const burl = "http://127.0.0.1:5000/user/verify";
 
-    fetch(`http://127.0.0.1:5000/user/verify/${token}`)
-      .then(res => res.json())
-      .then(data => {
-        const messageEl = document.getElementById("message");
-        const linkEl = document.getElementById("login-link");
-        const spinner = document.getElementById("spinner");
+    // Set a minimum delay for the spinner to be visible
+    const spinnerTimeout = 1000; // 1 second
+
+    // Initially, show spinner
+    const spinner = document.getElementById("spinner");
+    const messageEl = document.getElementById("message");
+    const linkEl = document.getElementById("login-link");
+
+    // Function to handle response
+    const handleResponse = (data) => {
+      setTimeout(() => {
         spinner.style.display = "none";
 
         if (data.success) {
@@ -46,15 +51,26 @@
           messageEl.innerHTML = `❌ Verification failed: ${data.message}`;
           messageEl.classList.add("text-red-600");
         }
+      }, spinnerTimeout);
+    };
+
+    // Fetch request
+    fetch(`${burl}/${token}`)
+      .then(res => res.json())
+      .then(data => {
+        handleResponse(data);
       })
       .catch(err => {
-        document.getElementById("message").innerHTML =
-          `❌ Something went wrong. Please try again later.`;
-        document.getElementById("spinner").style.display = "none";
-        document.getElementById("message").classList.add("text-red-600");
+        setTimeout(() => {
+          spinner.style.display = "none";
+          messageEl.innerHTML = `❌ Something went wrong. Please try again later.`;
+          messageEl.classList.add("text-red-600");
+        }, spinnerTimeout);
+
         console.error(err);
       });
   </script>
+
 
   <style>
     .animate-fadeIn {

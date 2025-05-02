@@ -52,7 +52,7 @@ passwordInput.addEventListener("input", () => {
 
 
 // Form submission handling
-
+// Registration form submission
 const regForm = document.getElementById('registerForm');
 regForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -88,6 +88,7 @@ regForm.addEventListener('submit', async (e) => {
     }
 });
 
+// Login form submission
 const logForm = document.getElementById('loginForm');
 logForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -119,4 +120,9 @@ logForm.addEventListener('submit', async (e) => {
         console.error('Error:', error);
     }
 });
+
+
+
+
+
 
