@@ -40,11 +40,15 @@
                     <select name="profession" id="profession" required
                         class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:outline-none">
                         <option value="" disabled selected>Select Profession</option>
-                        <option value="electrician">Electrician</option>
-                        <option value="plumber">Plumber</option>
-                        <option value="carpenter">Carpenter</option>
-                        <option value="mechanic">Mechanic</option>
-                        <option value="cleaner">Cleaner</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="CCTV_Technician">CCTV Technician</option>
+                        <option value="TV_Technician">TV Technician</option>
+                        <option value="AC_Technician">AC Technician</option>
+                        <option value="Refrigirator_Technician">Refrigirator Technician</option>
+                        <option value="Waterheater_Technician">Waterheater Technician</option>
+                        <option value="Washing_Machine_Technician">Washing Machine Technician</option>
                     </select>
                 </div>
                 <div>
@@ -65,13 +69,17 @@
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const joinusForm = document.getElementById('joinusForm');
-            const furl = "http://127.0.0.1:5000/user/";
+            const furl = "http://127.0.0.1:5000/worker/";
             const burl = "http://127.0.0.1:5500/";
 
             joinusForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
                 const formData = new FormData(joinusForm);
+                const submitBtn = joinusForm.querySelector('button[type="submit"]')
+                // Disable the button and show "Submitting..."
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Submitting...";
 
                 try {
                     const response = await fetch(`${furl}joinus`, {
@@ -91,6 +99,10 @@
                 } catch (error) {
                     console.error('Network or JSON error:', error);
                     alert("Something went wrong. Check the console for more details.");
+                } finally {
+                    // Re-enable the button in case of error
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Register";
                 }
             });
         });
