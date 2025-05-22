@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User - ServiceHub</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-stone-200">
+  <section class="bg-stone-50 p-3 m-5 rounded-md shadow-md">
+
+    <!-- Header -->
+    <header class="mb-3">
+      <div class="flex items-center justify-between">
+        <h1 class="text-xl font-bold text-gray-800 md:ml-5">
+          Service<span class="text-yellow-600">Hub</span>
+        </h1>
+        <div class="flex items-center gap-4 md:mr-5">
+          <!-- Search Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.34-4.34" />
+          </svg>
+          <!-- Bell Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+            <path
+              d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+          </svg>
+          <!-- Profile Icon -->
+          <img width="35" height="35" src="https://img.icons8.com/office/40/test-account.png" alt="Profile Icon" />
+        </div>
+      </div>
+      <hr class="mt-2 border-gray-300" />
+    </header>
+
+    <!-- Booking Title -->
+    <div class="text-center my-5" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-zinc-800">Booking Form</h2>
+    </div>
+
+    <!-- Booking Form -->
+    <form action="#" data-aos="zoom-in" class="xl:px-[250px]">
+      <div class="flex flex-col gap-4 p-5 md:mx-9 mb-9">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required
+          class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none"
+          placeholder="Enter Your Name" />
+
+        <label for="number">Whatsapp Number</label>
+        <input type="number" id="number" name="number" required
+          class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none"
+          placeholder="Enter Your Whatsapp Number" />
+
+
+        <label for="service">Service Type</label>
+        <select id="service" name="service" required
+          class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none">
+          <option value="">-- Select a Service --</option>
+          <option value="electrician">Electrician</option>
+          <option value="plumbing">Plumbing</option>
+          <option value="carpenter">Carpenter</option>
+          <option value="CCTV-Technician">CCTV Technician</option>
+          <option value="TV-Technician">TV Technician</option>
+          <option value="AC-Technician">AC Technician</option>
+          <option value="Refrigerator-Technician">Refrigerator Technician</option>
+          <option value="Geyser-Technician">Geyser Technician</option>
+          <option value="Washing-Machine-Technician">Washing Machine Technician</option>
+        </select>
+
+        <label for="address">Service Address</label>
+        <textarea id="address" name="address" required
+          class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none"
+          placeholder="Enter Your Address"></textarea>
+
+        <label for="service_details">Service Details</label>
+        <textarea id="service_details" name="service_details" required
+          class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none"
+          placeholder="Enter About Your Service Detail"></textarea>
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required
+          class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none" />
+
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required
+          class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 outline-none" />
+
+        <button type="submit"
+          class="bg-yellow-400 hover:bg-yellow-500 text-zinc-900 font-semibold py-2 px-4 rounded-xl transition duration-300">
+          Book Now
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Bottom Navbar -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-300 shadow">
+    <div class="flex justify-around items-center h-14">
+      <!-- Home -->
+      <a href="./user_index.html" class="flex flex-col items-center text-gray-800 hover:text-yellow-600">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12l9-9 9 9" />
+          <path d="M9 21V12h6v9" />
+        </svg>
+        <span class="text-xs font-semibold text-zinc-900">Home</span>
+      </a>
+
+      <!-- Services -->
+      <a href="./services.html" class="flex flex-col items-center text-gray-800 hover:text-yellow-600">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 12h6M9 16h6M3 6h18M3 6l3 6-3 6" />
+        </svg>
+        <span class="text-xs font-semibold text-zinc-900">Services</span>
+      </a>
+
+      <!-- Book Now -->
+      <a href="./booking_form.html" class="flex flex-col items-center text-gray-800 hover:text-yellow-600">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16l-5-4.5-5 4.5-5-4.5L3 20V4z" />
+        </svg>
+        <span class="text-xs font-semibold text-zinc-900">Book Now</span>
+      </a>
+
+      <!-- My Bookings -->
+      <a href="./mybookings.html" class="flex flex-col items-center text-gray-800 hover:text-yellow-600">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+        </svg>
+        <span class="text-xs font-semibold text-zinc-900">My Bookings</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2500,
+      once: false
+    });
+  </script>
+</body>
+
+</html>

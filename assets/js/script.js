@@ -78,7 +78,7 @@ regForm.addEventListener('submit', async (e) => {
 
         if (response.ok) {
             alert("Registration successful! Please check your email to verify your account.");
-            window.location.href = 'http://127.0.0.1:5500/userform.html';  // Redirect to login or show a message
+            window.location.href = 'http://127.0.0.1:5500/public/userform.html';  // Redirect to login or show a message
         } else {
             console.log(data); // Show any error or handle the failure
             alert('Error: ' + data.message); // Display the error message
@@ -111,7 +111,7 @@ logForm.addEventListener('submit', async (e) => {
 
         if (response.ok) {
             // Redirect to login page or home page
-            window.location.href = 'http://127.0.0.1:5500/index.html';  // Adjust this URL based on your app routing
+            window.location.href = 'http://127.0.0.1:5500/public/index.html';  // Adjust this URL based on your app routing
         } else {
             console.log(data); // Show any error or handle the failure
             alert('Error: ' + data.message); // Display the error message
